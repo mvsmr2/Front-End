@@ -54,7 +54,20 @@
   <!-- I BELIEVE THIS SHOULD BE A MODAL -->
 
 <!-- BUDDY(S) -->
+<ion-item>
+  <ion-label>Buddies</ion-label>
+    <ion-select multiple="true" cancelText="Cancel" okText="Done">
+      <ion-select-option *ngFor="let b of buddies" >{{b}}</ion-select-option>
+    </ion-select>
+</ion-item>
 
+<!-- SUBMIT / CANCEL BUTTON -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-button strong=true type=submit expand="block" size="default">Submit</ion-button>
+    <ion-button type=reset expand="block" size="default" slot="end">Cancel</ion-button>
+  </ion-toolbar>  
+</ion-footer>
 
 
   <app-explore-container name="Create New Task"></app-explore-container>
