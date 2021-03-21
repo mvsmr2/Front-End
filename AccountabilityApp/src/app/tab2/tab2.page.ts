@@ -25,5 +25,9 @@ export class Tab2Page {
   public currMinute: any = ('0' + (new Date().getMinutes())).slice(-2)
   public currTime: any = this.currHour12 + ":" + this.currMinute + " " + this.currAMPM;
 
+  public buddies = ['Bud1', 'Bud2', 'Steve', 'Bud4']
+
 
 }
+
+
