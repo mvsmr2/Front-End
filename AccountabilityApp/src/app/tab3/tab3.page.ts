@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController} from '@ionic/angular';
+import { RepeatSelectorComponent } from '../repeat-selector/repeat-selector.component';
 
 @Component({
   selector: 'app-tab3',
@@ -7,7 +9,15 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  constructor(public modalController: ModalController) {}
+  
+  async presentModal(event) {
+    const modal = await this.modalController.create({
+      component: RepeatSelectorComponent
+    });
+    return await modal.present();
+  }
+
 
   // IDK I ADDED THIS TO FIX DATETIME MAX AND MIN
   public date: string = new Date().toISOString();
@@ -23,7 +33,7 @@ export class Tab3Page {
   // mins = ('0'+current_date.getMinutes()).slice(-2);
   public currMinute: any = ('0' + (new Date().getMinutes())).slice(-2)
   public currTime: any = this.currHour12 + ":" + this.currMinute + " " + this.currAMPM;
-
+  //repeat stuff
   public buddies = ['Bud1', 'Bud2', 'Steve', 'Bud4']
 
 

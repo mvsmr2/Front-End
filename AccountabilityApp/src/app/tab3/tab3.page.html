@@ -40,14 +40,12 @@
   <!-- <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime> -->
 </ion-item>
 
-
-
 <!-- REPEATS? -->
 <ion-item>
   <ion-label>Repeats</ion-label>
   <!-- Checked Checkbox -->
   <!-- <ion-checkbox checked="false" color="secondary"></ion-checkbox> -->
-  <ion-toggle [(ngModel)]="repeat" checked="false" color=tertiary name="repeatButton"></ion-toggle>
+  <ion-toggle [(ngModel)]="repeat" checked="false" color=tertiary name="repeatButton" (click)="presentModal()"></ion-toggle>
 </ion-item>
 
   <!-- PROMPTS FOR REPEAT INFORMATION -->
