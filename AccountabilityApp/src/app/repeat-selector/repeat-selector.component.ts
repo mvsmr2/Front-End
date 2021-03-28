@@ -14,15 +14,6 @@ export class RepeatSelectorComponent{
 
   constructor(public modalController: ModalController) { }
 
-  async presentModal() 
-  {
-    const modal = await this.modalController.create({
-      component: RepeatSelectorComponent,
-      //cssClass: 'my-custom-class'
-    });
-    return await modal.present();
-  }
-
   dismiss() {
     // using the injected ModalController this page
     // can "dismiss" itself and optionally pass back data

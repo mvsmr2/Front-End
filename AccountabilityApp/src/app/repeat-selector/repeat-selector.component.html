@@ -1,7 +1,3 @@
-<!-- <p>
-  repeat-selector works!
-</p> -->
-
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
@@ -23,9 +19,7 @@
 <!-- BUDDY(S) -->
 <ion-item>
   <ion-label>Days</ion-label>
-    <ion-select multiple="true" cancelText="Cancel" okText="Done"[(ngModel)]="pickedDays">
-      <!-- <ion-select-option *ngFor="let d of weekdays" [(ngModel)]="pickedDays">{{d}}</ion-select-option> -->
-      <!-- <ion-select-option *ngFor="let d of weekdays">{{d}}</ion-select-option> -->
+    <ion-select multiple="true" cancelText="Cancel" okText="Done" [(ngModel)]="pickedDays">
       <ion-select-option value="Sunday">Sunday</ion-select-option>
       <ion-select-option value="Monday">Monday</ion-select-option>
       <ion-select-option value="Tuesday">Tuesday</ion-select-option>
