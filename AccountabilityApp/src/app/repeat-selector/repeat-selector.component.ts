@@ -6,7 +6,11 @@ import { ModalController } from '@ionic/angular';
   templateUrl: './repeat-selector.component.html',
   styleUrls: ['./repeat-selector.component.scss'],
 })
-export class RepeatSelectorComponent implements OnInit {
+export class RepeatSelectorComponent{
+
+  //vars to send
+  pickedDays: [string] = ["empty"];
+  pickedEndTime: any = null;
 
   constructor(public modalController: ModalController) { }
 
@@ -22,6 +26,8 @@ export class RepeatSelectorComponent implements OnInit {
   dismiss() {
     // using the injected ModalController this page
     // can "dismiss" itself and optionally pass back data
+    alert(this.pickedEndTime)
+    alert(this.pickedDays)
     this.modalController.dismiss({//uhh idk
       'dismissed': true
     });
@@ -40,8 +46,5 @@ export class RepeatSelectorComponent implements OnInit {
   public time: any = new Date().getTime();
   public currYear: string = new Date().toLocaleDateString();
   public maxDate : any = (new Date()).getFullYear() + 2;
-
-  ngOnInit() {}
-
 
 }

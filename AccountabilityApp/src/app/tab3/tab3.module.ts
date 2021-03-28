@@ -18,10 +18,8 @@ import { RepeatSelectorComponent } from '../repeat-selector/repeat-selector.comp
     RouterModule.forChild([{ path: '', component: Tab3Page }]),
     Tab3PageRoutingModule,
   ],
+  declarations: [Tab3Page, RepeatSelectorComponent],
 
-  entryComponents: [RepeatSelectorComponent],
-
-  declarations: [Tab3Page, RepeatSelectorComponent]
-
+  entryComponents: [RepeatSelectorComponent]
 })
 export class Tab3PageModule {}

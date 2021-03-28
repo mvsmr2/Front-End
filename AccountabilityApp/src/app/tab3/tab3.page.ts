@@ -15,7 +15,7 @@ export class Tab3Page {
     const modal = await this.modalController.create({
       component: RepeatSelectorComponent
     });
-    return await modal.present();
+    await modal.present();
   }
 
 

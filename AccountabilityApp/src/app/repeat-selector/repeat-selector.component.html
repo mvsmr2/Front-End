@@ -23,16 +23,26 @@
 <!-- BUDDY(S) -->
 <ion-item>
   <ion-label>Days</ion-label>
-    <ion-select multiple="true" cancelText="Cancel" okText="Done">
-      <ion-select-option *ngFor="let d of weekdays" >{{d}}</ion-select-option>
+    <ion-select multiple="true" cancelText="Cancel" okText="Done"[(ngModel)]="pickedDays">
+      <!-- <ion-select-option *ngFor="let d of weekdays" [(ngModel)]="pickedDays">{{d}}</ion-select-option> -->
+      <!-- <ion-select-option *ngFor="let d of weekdays">{{d}}</ion-select-option> -->
+      <ion-select-option value="Sunday">Sunday</ion-select-option>
+      <ion-select-option value="Monday">Monday</ion-select-option>
+      <ion-select-option value="Tuesday">Tuesday</ion-select-option>
+      <ion-select-option value="Wednesday">Wednesday</ion-select-option>
+      <ion-select-option value="Thursday">Thursday</ion-select-option>
+      <ion-select-option value="Friday">Friday</ion-select-option>
+      <ion-select-option value="Saturday">Saturday</ion-select-option>
     </ion-select>
 </ion-item>
 
 <!-- END DATE -->
 <ion-item>
   <ion-label>End Date</ion-label>
-  <ion-datetime pickerFormat="MM/DD/YYYY" [min]="date" [max]="maxDate" [placeholder]="currYear"></ion-datetime>
+  <ion-datetime pickerFormat="MM/DD/YYYY" [min]="date" [max]="maxDate" [placeholder]="currYear" [(ngModel)]="pickedEndTime"></ion-datetime>
+  <!-- <ion-datetime pickerFormat="MM/DD/YYYY" [min]="date" [max]="maxDate" [placeholder]="currYear"></ion-datetime> -->
 </ion-item>
+
 
 
 <ion-footer>
